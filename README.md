@@ -1,2 +1,4 @@
 # TIL
-* 실습 공부
+* PYTHON
+* HTML/CSS
+* JAVASCRIPT
