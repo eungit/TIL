@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="_reset.css">
+  <style>
+    body{
+      height:200vh;
+      background-color:darkcyan;
+    }
+    .nav-bar{
+     display: flex;
+     justify-content:space-between;
+     align-items: center;
+     position: sticky;
+     height: 2rem;
+     padding: 1rem 2rem;
+     background-color: white;
+    }
+    .nav-bar div {
+      display: flex; /* 링크들을 수평 정렬 */
+      
+    }
+    .nav-bar a {
+      display: block; /* 각 링크를 블록 요소로 변환 */
+      padding: 0.5rem 0.5rem; /* 링크의 패딩을 추가 */
+      margin-right: 0.5rem; /* 각 박스 사이의 간격을 추가 */
+      background-color:azure; /* 배경색을 설정하여 박스 형태를 명확히 */
+      text-decoration: none; /* 링크의 기본 밑줄 제거 */
+      border-radius: 4px; /* 박스의 모서리 둥글게 처리 */
+    }
+    .nav-bar a:last-child {
+      margin-right: 0; /* 마지막 링크에는 오른쪽 여백을 없앰 */
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <h1>APPAREL SHOP</h1>
+    <div>
+    <a href="https://github.com/">HOME</a>
+    <a href="https://github.com/eungit">PRODUCTS</a>
+    </div>
+  </nav>
+</body>
+</html>
