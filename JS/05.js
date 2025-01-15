@@ -18,8 +18,9 @@ let babyMovieTitles = babyMovies.map((movie, index) => {
 console.log(babyMovieTitles);
 
 //이건 간소화 버전
-// let baby = movies 
+// let baby = movies
 //     .filter(movie => movie.isAdult === false)
 //     .map(movie => movie.title)
             
 // console.log(baby)
+
