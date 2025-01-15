@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        //fetch의 반환값을 response에 싹 가져와. 근데 json으로 오면 그대로 못쓰니깐 인자로 넣어서 js로 바꿔서 봐
+        .then(res =>console.log(res))//js 로 넘어와서 반환값 찍어봄
+    </script>
+</body>
+</html>
