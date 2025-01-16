@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const container = document.querySelector('#container');
+
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('id','greeting');
+        newDiv.className = 'welcome-message';
+        newDiv.textContent = 'Hello World';
+        container.appendChild(newDiv);
+    </script>
+</body>
+</html>
