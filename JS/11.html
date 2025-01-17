@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <h2>수동 카운터</h2>
+    <p class="p1">0</p>
+    <button class="btnPlus">더하기</button>
+    <button class="btnMinus">빼기</button>
+    <button class="btnReset">리셋하기</button>
+
+    <hr />
+    <!-- 2 -->
+    <h2>자동 카운터</h2>
+    <p class="p2">0</p>
+    <span>10이 되면 멈춥니다!</span>
+
+    <script>
+		const btnPlus = document.querySelector(".btnPlus")
+        const btnMinus = document.querySelector(".btnMinus")
+        const btnReset = document.querySelector(".btnReset")
+        const p1 = document.querySelector('.p1')
+
+        const changeBtn = function (behavior) {
+            let cnt = parseInt(p1.innerText)
+            if (behavior ==='plus'){
+                cnt++
+            }
+            else if(behavior ==='minus'){
+                cnt--
+            }
+            else if(behavior === 'reset'){
+                cnt = 0
+            }
+            p1.innerText = cnt; 
+        }
+
+        btnPlus.addEventListener("click", () => changeBtn('plus'))
+        btnMinus.addEventListener("click", () => changeBtn('minus'))
+        btnReset.addEventListener("click", () => changeBtn('reset'))
+        
+        //자동 카운터
+        const p2 = document.querySelector(".p2");
+
+        const autoPlus = function(){
+            let autoCnt = parseInt(p2.innerText);
+            autoCnt++;
+            p2.innerText = autoCnt;
+
+            if (autoCnt <=9){
+                autoCnt++;
+            }else{
+                clearInterval(interval);
+            }
+        };
+
+        let interval = setInterval(autoPlus, 300);
+    </script>
+  </body>
+</html>
